@@ -1,0 +1,201 @@
+
+<!doctype html>
+<html>
+<head>
+<title>Happy Birthday Dylan!</title>
+<meta charset="utf-8"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+<style>
+body{
+    margin: 0;
+    background-color: white;
+}
+
+.carddisplay{
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    perspective: 1800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card{
+    transform-style: preserve-3d;
+    position: relative;
+    width: 400px;
+    height: 550px;
+    cursor: pointer;
+}
+
+.page1, .page2, .page3 {
+    transform-style: preserve-3d;
+    transform-origin: left center;
+    transition: transform .7s ease-in-out, box-shadow .7s ease-in-out;
+    position: absolute;
+    box-sizing: border-box;
+    width: 400px;
+    height: 550px;
+    top: 0;
+    left: 0;
+    background-color: #f1b844;
+    overflow: hidden;
+}
+
+.page1 {
+    background-image: url('Birthday Cat.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.page2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 5px;
+    gap: 5px;
+    z-index: 2;
+}
+
+.page3{
+    padding: 30px;
+    z-index: 1;
+}
+
+.card:hover .page1{
+    transform: rotateY(-160deg);
+    box-shadow: 0 0.5em .5em 0 rgba(0, 0, 0, .4);
+}
+
+.card:hover .page2{
+    transform: rotateY(-159deg);
+}
+
+.card:hover .page3{
+    transform: rotateY(-20deg);
+    box-shadow: 0 0.5em .5em 0 rgba(0, 0, 0, .4);
+}
+
+h1{
+    font-family: "Chewy", system-ui;
+    font-size: 40px;
+    line-height: 1.1;
+    color: black;
+    text-align: center;
+    margin: 0;
+    padding: 15px 5px;
+}
+
+.top{
+    text-align: left;
+    align-self: flex-start;
+}
+
+.bottom{
+    text-align: right;
+    align-self: flex-end;
+}
+
+.message{
+    margin-top: 20px;
+    color: black;
+    text-align: center;
+}
+
+h2{
+    font-family: "Chewy", system-ui;
+    font-size: 15px;
+    text-align: left;
+}
+
+p{
+    font-family: "Chewy", system-ui;
+    font-size: 14.5px;
+    line-height: 1.0;
+    text-align: left;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-width: 0;
+    min-height: 0;
+    transform: scaleX(-1);
+}
+
+@media (max-width: 600px){
+    .card{
+        width: 280px;
+        height: 390px;
+    }
+
+    .page1, .page2, .page3{
+        width: 280px;
+        height: 390px;
+    }
+
+    h1{
+        font-size: 25px;
+        padding: 12px 4px;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+
+    p{
+        font-size: 18px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+<div class="carddisplay">
+    <div class="card">
+        <div class="page3">
+            <div class="message">
+                <h2>Dear Dylan,</h2>
+                <p>HAPPY BIRTHDAY TO YOU! <br> 
+                    <br>
+                You are now many years old! HAHAHA! I'd like to wish you a happy birthday, of course, and I hope all your birthday wishes come true. <br>
+                    <br>
+                There's truly never a dull moment when you are in the room with us. There are always laughs and tears when the three of us are together. Even though you were here first, technically you were the addition to Elis and my friendship. So, that technically means I was first. But I couldn't be more glad that you joined us and became Elis's boyfriend. <br>
+                    <br>
+                The three of us had lots of adventures together and made so many happy memories. And I wouldn't trade them for anything else. You are truly a great friend, a good tutor, and, most importantly, a great boyfriend to Elis. I'm glad that even though she tried dodging and avoiding you, she is eventually stuck with you now. <br>
+                    <br>
+                I wouldn't change anything. I love our little trio. Even though technically I am a third wheel like crazy, too bad, though. :) I'm y'all's unofficial child, and I hope we all have lots more adventures together and make more happy memories. <br>
+                    <br>
+                And cheers to forever ragebaiting Elis together! Hehehe! <br>
+                    <br>
+                - Karen </p>
+            </div>
+        </div>
+        <div class="page2">
+            <img src="Picture 4.png">
+            <img src="Picture 2.png">
+            <img src="Picture.png">
+            <img src="Picture 3.png">
+        </div>
+        <div class="page1">
+            <h1 class="top">WAIT A MEOWMENT!</h1>
+            <h1 class="bottom">IT'S YOUR BIRTHDAY!</h1>
+        </div>
+    </div>
+</div>
+</body>
+</html>
